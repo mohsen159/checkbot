@@ -20,6 +20,7 @@ def send_telegram_message(token, chat_id, message):
     bot.send_message(chat_id=chat_id, text=message)
 
 def main():
+    print("Starting script...")
     website_status = check_website(WEBSITE_URL)
     status_message = "up" if website_status else "down"
     message = f"Alert: The website {WEBSITE_URL} is {status_message}!"
