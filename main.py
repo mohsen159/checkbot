@@ -9,10 +9,9 @@ CHAT_ID = "7280950781"
 
 # Website URL to check
 WEBSITE_URL = "https://expressedzshop.peasy.top/body-scale-03-ar.html?fbclid=IwY2xjawE9_jpleHRuA2FlbQIxMAABHWYS7AjEfQZkjSrNw7JKMIUyH436kXYh2HpzhrkaE9jX5_WFUmQivSW_oA_aem_qRttjfua-CNfRG5NGm6Yag"
-
-def send_telegram_message(token, chat_id, message):
+async def send_telegram_message(token, chat_id, message):
     bot = Bot(token=token)
-    bot.send_message(chat_id=chat_id, text=message)
+    await bot.send_message(chat_id=chat_id, text=message)
 
 def check_website(url):
     try:
@@ -23,15 +22,16 @@ def check_website(url):
         print(f"Error checking website: {e}")
         return False
 
-def main():
+async def main():
     while True:
+        print("starting ")
         website_status = check_website(WEBSITE_URL)
         status_message = "up" if website_status else "down"
         message = f"Alert: The website {WEBSITE_URL} is {status_message}!"
         print(f"Sending message: {message}")  # Debug information
-        send_telegram_message(TELEGRAM_TOKEN, CHAT_ID, message)
-        time.sleep(120)  # Wait for 2 minutes before checking again
+        await send_telegram_message(TELEGRAM_TOKEN, CHAT_ID, message)
+        await asyncio.sleep(120)  # Wait for 2 minutes before checking again
 
 if __name__ == "__main__":
-    print("starting ")
-    main()
+    asyncio.run(main())  
+
