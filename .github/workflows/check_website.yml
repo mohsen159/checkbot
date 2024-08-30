@@ -21,4 +21,4 @@ jobs:
           pip install requests python-telegram-bot
       
       - name: Run script
-        run: python check_website.py
+        run: python main.py
