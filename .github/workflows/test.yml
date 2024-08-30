@@ -1,29 +1,17 @@
-
-name: Test Workflow
+name: Simple Check
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Runs every 2 minutes
+    - cron: '*/2 * * * *'  # Every 2 minutes
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  test:
+  example_job:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v3
-        with:
-          python-version: '3.10'
-
-      - name: Print Python Version
-        run: python --version
-
-      - name: Print Date and Time
-        run: date
-
-      - name: Print Environment Variables
-        run: env
+      - name: Run a simple command
+        run: echo "Hello, world!"
