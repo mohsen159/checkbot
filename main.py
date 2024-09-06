@@ -30,7 +30,7 @@ async def main():
         message = f"Alert: The website {WEBSITE_URL} is {status_message}!"
         print(f"Sending message: {message}")  # Debug information
         await send_telegram_message(TELEGRAM_TOKEN, CHAT_ID, message)
-        await asyncio.sleep(900)  # Wait for 2 minutes before checking again
+        await asyncio.sleep(10)  # Wait for 2 minutes before checking again
 
 if __name__ == "__main__":
     asyncio.run(main())  
