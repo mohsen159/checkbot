@@ -5,10 +5,10 @@ import asyncio
 
 # Telegram bot token and chat ID
 TELEGRAM_TOKEN = "7487022753:AAFPHijXrk4EqTmNJxhHTT6MllmTHog5Ue8"
-CHAT_ID = "7280950781"
+CHAT_ID = "922909522"
 
 # Website URL to check
-WEBSITE_URL = "https://expressed888zshop.peasy.top/body-scale-03-ar.html?fbclid=IwY22222E9_jpleHRuA2FlbQIxMAABHWYS7AjEfQZkjSrNw7JKMIUyH436kXYh2HpzhrkaE9jX5_WFUmQivSW_oA_aem_qRttjfua-CNfRG5NGm6Yag"
+WEBSITE_URL = "https://expressedzshop.peasy.top/body-scale-03-ar.html?fbclid=IwY2xjawE9_jpleHRuA2FlbQIxMAABHWYS7AjEfQZkjSrNw7JKMIUyH436kXYh2HpzhrkaE9jX5_WFUmQivSW_oA_aem_qRttjfua-CNfRG5NGm6Yag"
 def check_website(url):
     try:
         response = requests.get(url)
@@ -39,7 +39,7 @@ async def main():
         else:
             print(f"The website {WEBSITE_URL} is up.")
         
-        await asyncio.sleep(120)  # Wait for 2 minutes before checking again
+        await asyncio.sleep(900)  # Wait for 2 minutes before checking again
 
 if __name__ == "__main__":
     asyncio.run(main())
