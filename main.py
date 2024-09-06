@@ -8,7 +8,7 @@ TELEGRAM_TOKEN = "7487022753:AAFPHijXrk4EqTmNJxhHTT6MllmTHog5Ue8"
 CHAT_ID = "7280950781"
 
 # Website URL to check
-WEBSITE_URL = "https://expressedzshop.peasy.top/body-scale-03-ar.html?fbclid=IwY22222E9_jpleHRuA2FlbQIxMAABHWYS7AjEfQZkjSrNw7JKMIUyH436kXYh2HpzhrkaE9jX5_WFUmQivSW_oA_aem_qRttjfua-CNfRG5NGm6Yag"
+WEBSITE_URL = "https://expressed888zshop.peasy.top/body-scale-03-ar.html?fbclid=IwY22222E9_jpleHRuA2FlbQIxMAABHWYS7AjEfQZkjSrNw7JKMIUyH436kXYh2HpzhrkaE9jX5_WFUmQivSW_oA_aem_qRttjfua-CNfRG5NGm6Yag"
 async def send_telegram_message(token, chat_id, message):
     bot = Bot(token=token)
     await bot.send_message(chat_id=chat_id, text=message)
